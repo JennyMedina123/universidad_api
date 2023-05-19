@@ -2,7 +2,7 @@ package apiproyectogrupo.apiproyectogrupo.modelos;
 
 import jakarta.persistence.*;
 
-@Entity // se coloca en el foco para importar la libreria que lo identifica como una entidad
+@Entity // se coloca en el foco para importar Alumnos que lo identifica como una entidad
 @Table(name = "Alumnos")
 // Se colocan la clase con sus columnas
 public class Alumno {
@@ -20,35 +20,35 @@ public class Alumno {
    @Column(name = "Telefono", length = 40)
    private String telefono;
 
-    public long getIdAlumno() {
-        return numMatricula;
-    }
+public long getIdAlumno() {
+    return numMatricula;
+}
 
-    public String getNombreAlumno() {
-        return nombre;
-    }
+public String getNombreAlumno() {
+    return nombre;
+}
 
-    public String getFecha_Nacimiento() {
-        return fechaNacimiento;
-    }
+public String getFecha_Nacimiento() {
+    return fechaNacimiento;
+}
 
-    public String getTelefono() {
-        return telefono;
-    }
-    public void setIdAlumno(long IdAlumno) {
-        this.numMatricula = IdAlumno;
-    }
+public String getTelefono() {
+    return telefono;
+}
+public void setIdAlumno(long IdAlumno) {
+    this.numMatricula = IdAlumno;
+}
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+public void setNombre(String nombre) {
+    this.nombre = nombre;
+}
 
-    public void setFechaNacimiento(String fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
-    }
+public void setFechaNacimiento(String fechaNacimiento) {
+    this.fechaNacimiento = fechaNacimiento;
+}
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
+public void setTelefono(String telefono) {
+    this.telefono = telefono;
+}
     
 }
