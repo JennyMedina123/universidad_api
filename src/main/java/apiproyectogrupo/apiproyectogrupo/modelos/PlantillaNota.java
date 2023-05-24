@@ -9,9 +9,12 @@ public class PlantillaNota {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name ="id_plantilla")
     private long idPlantilla;
-    
-   @Column(name = "Num_Matricula")
-   private long numMatricula;
+/*El @ManyToOne en java esta diciendo que la relacion es de muchos a muchos 
+y con el @JoinColumn se hace la relacion luego vamos a probar y a revisar en sql 
+el diagrama*/
+   @ManyToOne
+   @JoinColumn(name = "Num_Matricula", referencedColumnName = "Num_Matricula")
+   private Alumno numMatricula;
 
    @Column(name = "Fecha_inicio_semestre", length = 10)
    private String fechaInicioSemestre;
@@ -23,7 +26,7 @@ public class PlantillaNota {
         return idPlantilla;
     }
 
-    public long getNumMatricula() {
+    public Alumno getNumMatricula() {
         return numMatricula;
     }
 
@@ -38,7 +41,7 @@ public class PlantillaNota {
         this.idPlantilla = IdPlantillaNota;
     }
 
-    public void setNumMatricula(long numMatricula) {
+    public void setNumMatricula(Alumno numMatricula) {
         this.numMatricula = numMatricula;
     }
 
