@@ -8,7 +8,7 @@ public class PlantillaNota {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name ="id_plantilla")
-    private long idPlantilla;
+    private long idPlantilla; 
 /*El @ManyToOne en java esta diciendo que la relacion es de muchos a muchos 
 y con el @JoinColumn se hace la relacion luego vamos a probar y a revisar en sql 
 el diagrama*/
