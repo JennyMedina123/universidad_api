@@ -17,8 +17,11 @@ el diagrama*/
    @JoinColumn(name = "id_plantilla", referencedColumnName = "id_plantilla")
    private PlantillaNota idplantilla;
 
-   @Column(name = "id_grupo", length = 10)
-   private String idgrupo;
+/*El @ManyToOne en java esta diciendo que la relacion es de muchos a muchos 
+para relacionarlo con Grupo se debe coger el encabezado desde plantillaNota*/
+    @ManyToOne
+    @JoinColumn(name = "id_grupo", referencedColumnName = "id_grupo")
+    private Grupo grupo;
 
    @Column(name = "nota", length = 10)
    private String nota;
@@ -31,8 +34,8 @@ el diagrama*/
         return idplantilla;
     }
 
-    public String getid_grupo() {
-        return idgrupo;
+    public Grupo grupo() {
+        return grupo;
     }
 
     public String getnota() {
@@ -46,11 +49,11 @@ el diagrama*/
         this.idplantilla = IdPlantillaNota;
     }
 
-    public void setid_grupo(String idgrupo) {
-        this.idgrupo = idgrupo;
+    public void setGrupo(Grupo grupo) {
+        this.grupo = grupo;
     }
 
-    public void setnota(String nota) {
+    public void setNota(String nota) {
         this.nota = nota;
     }
     
