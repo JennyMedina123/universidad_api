@@ -12,4 +12,5 @@ public interface IAlumnoServicio {
     public Alumno guardar(Alumno alumno);
 
     public boolean eliminar(Long idAlumno);
+
 }
